@@ -21,13 +21,36 @@
     </header>
 
     <main class="container">
-        <section class="repos-section">
+       <!-- <section class="repos-section">
             <h2>Our Open Source Projects</h2>
             <p>Explore our active repositories and dive into our code.</p>
             <ul id="repos-list">
                 <li><i class="fas fa-spinner fa-spin"></i> Loading repositories...</li>
             </ul>
             <p id="repos-error-message" class="error-message" style="display: none;"></p>
+        </section> -->
+
+        <section class="private-repos-section">
+            <h2>Our Private/Internal Projects (Selected)</h2>
+            <p>Here are some of our key private projects, showcased for their impact and use cases.</p>
+            <ul id="private-repos-list">
+                <li>
+                    <a href="https://github.com/YourOrgName/private-project-x" target="_blank">
+                        Private Project X </a>
+                    <i class="fas fa-info-circle repo-info-icon"
+                       data-repo-name="Private Project X"
+                       data-repo-description="This project is an internal tool for managing our client data securely. It features a custom encryption module and integrates with our internal CRM. Its primary use case is streamlining data synchronization.">
+                    </i>
+                </li>
+                <li>
+                    <a href="https://github.com/YourOrgName/internal-api-service" target="_blank">
+                        Internal API Service </a>
+                    <i class="fas fa-info-circle repo-info-icon"
+                       data-repo-name="Internal API Service"
+                       data-repo-description="Our core backend service handles all internal data processing and business logic. It's built with scalability in mind and serves as the backbone for multiple applications.">
+                    </i>
+                </li>
+                </ul>
         </section>
 
         <section class="contributors-section">
