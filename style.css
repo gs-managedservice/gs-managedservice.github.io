@@ -1,0 +1,398 @@
+/* General Body and Theme */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1a26; /* Dark Blue Background */
+    color: #e0e6eb; /* Light text for contrast */
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #4CAF50; /* A contrasting accent color (e.g., green for tech) */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #2196F3; /* Bright blue for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #64B5F6; /* Lighter blue on hover */
+    text-decoration: underline;
+}
+
+/* Header Section */
+.header {
+    background-color: #1a3040; /* Slightly lighter dark blue for header */
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 3px solid #00BCD4; /* Cyan accent border */
+    text-align: center;
+}
+
+.logo-container {
+    margin-bottom: 15px;
+}
+
+.org-logo {
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+    border-radius: 5px; /* Slightly rounded corners for logo */
+}
+
+.org-info h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: #00BCD4; /* Cyan for main heading */
+}
+
+.org-info p {
+    font-size: 1.1em;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #B0BEC5; /* Greyish text for description */
+}
+
+/* Main Container */
+.container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #1a2a3a; /* Main content background, slightly darker than header */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #1a2a3a; /* Ensure sections have background if container has padding */
+    border-radius: 8px;
+}
+
+/* Repository Section */
+.repos-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.repos-section li {
+    background-color: #233748; /* Darker blue for list items */
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out name and icon */
+    border-left: 5px solid #2196F3; /* Blue left border */
+}
+
+.repos-section li a {
+    font-size: 1.2em;
+    font-weight: bold;
+    flex-grow: 1; /* Allow link to take available space */
+}
+
+.repo-info-icon {
+    font-size: 1.2em;
+    color: #4CAF50; /* Green for info icon */
+    cursor: pointer;
+    margin-left: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.repo-info-icon:hover {
+    color: #81C784; /* Lighter green on hover */
+    transform: scale(1.1);
+}
+
+/* Contributors Section */
+.contributors-section h2 {
+    color: #4CAF50;
+}
+
+#contributors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.contributor-item {
+    background-color: #233748;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid #4CAF50; /* Green accent */
+}
+
+.contributor-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #00BCD4; /* Cyan border around avatar */
+    margin-bottom: 10px;
+}
+
+.contributor-item h4 {
+    margin: 5px 0;
+    color: #e0e6eb;
+    font-size: 1.1em;
+}
+
+.contributor-item p {
+    color: #B0BEC5;
+    font-size: 0.9em;
+}
+
+/* Thanks Section */
+.thanks-section h2 {
+    color: #00BCD4;
+}
+
+.thanks-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.thanks-item {
+    background-color: #233748;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-top: 5px solid #FFC107; /* Amber accent */
+}
+
+.thanks-item h3 {
+    margin-top: 0;
+    color: #FFC107;
+    font-size: 1.6em;
+}
+
+.thanks-item p {
+    color: #B0BEC5;
+    font-style: italic;
+}
+
+
+/* Footer */
+.footer {
+    background-color: #1a3040;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #B0BEC5;
+    border-top: 3px solid #00BCD4;
+}
+
+/* Popup/Tooltip Styles */
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup {
+    background-color: #1a2a3a;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    position: relative;
+    max-height: 90vh; /* Limit height for scrollability */
+    overflow-y: auto; /* Enable scrolling for long content */
+    border: 2px solid #00BCD4;
+}
+
+.popup h3 {
+    color: #00BCD4;
+    margin-top: 0;
+    font-size: 2em;
+    text-align: center;
+    border-bottom: 1px solid #233748;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.popup p {
+    color: #e0e6eb;
+}
+
+.close-button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2.5em;
+    color: #FFC107; /* Amber close button */
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.close-button:hover {
+    transform: rotate(90deg);
+    color: #FFECB3;
+}
+
+.repo-link-button {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.repo-link-button:hover {
+    background-color: #66BB6A;
+    text-decoration: none;
+}
+
+/* Markdown Content Styling within popup */
+#popup-repo-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+#popup-repo-content h1, #popup-repo-content h2,
+#popup-repo-content h3, #popup-repo-content h4,
+#popup-repo-content h5, #popup-repo-content h6 {
+    color: #4CAF50; /* Green for headings in Markdown */
+    text-align: left;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #233748;
+    padding-bottom: 5px;
+}
+
+#popup-repo-content pre {
+    background-color: #0d1a26; /* Dark background for code blocks */
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: 'Cascadia Code', 'Fira Code', monospace; /* Monospaced font for code */
+    color: #9CCC65; /* Light green for code text */
+}
+
+#popup-repo-content code {
+    background-color: #233748;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: 'Cascadia Code', 'Fira Code', monospace;
+    color: #9CCC65;
+}
+
+#popup-repo-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    background-color: #233748;
+}
+
+#popup-repo-content th, #popup-repo-content td {
+    border: 1px solid #1a3040;
+    padding: 10px;
+    text-align: left;
+}
+
+#popup-repo-content th {
+    background-color: #1a3040;
+    color: #00BCD4;
+}
+
+#popup-repo-content ul, #popup-repo-content ol {
+    margin-left: 20px;
+}
+
+#popup-repo-content li {
+    margin-bottom: 5px;
+    color: #e0e6eb;
+}
+
+#popup-repo-content blockquote {
+    border-left: 4px solid #4CAF50;
+    padding-left: 15px;
+    margin-left: 0;
+    color: #B0BEC5;
+    font-style: italic;
+}
+
+
+/* Utility for Error Messages */
+.error-message {
+    color: #EF5350; /* Red for errors */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .org-info h1 {
+        font-size: 2em;
+    }
+
+    .org-info p {
+        font-size: 1em;
+    }
+
+    .container {
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .repos-section li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .repo-info-icon {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+
+    #contributors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .thanks-list {
+        flex-direction: column;
+    }
+
+    .popup {
+        width: 95%;
+        padding: 20px;
+    }
+}
