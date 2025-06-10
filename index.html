@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Org Name - Tech Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="https://via.placeholder.com/150x50?text=Your+Logo" alt="Organization Logo" class="org-logo">
+        </div>
+        <div class="org-info">
+            <h1 id="org-name">Your Organization Name</h1>
+            <p id="org-description">
+                We are a cutting-edge technology organization dedicated to innovation, open-source contributions, and solving complex problems with elegant software solutions. Our focus is on creating impactful tools and fostering a collaborative community.
+            </p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="repos-section">
+            <h2>Our Open Source Projects</h2>
+            <p>Explore our active repositories and dive into our code.</p>
+            <ul id="repos-list">
+                <li><i class="fas fa-spinner fa-spin"></i> Loading repositories...</li>
+            </ul>
+            <p id="repos-error-message" class="error-message" style="display: none;"></p>
+        </section>
+
+        <section class="contributors-section">
+            <h2>Top Contributors</h2>
+            <p>A huge shoutout to our most active community members!</p>
+            <div id="contributors-grid">
+                <p><i class="fas fa-spinner fa-spin"></i> Loading contributors...</p>
+            </div>
+            <p id="contributors-error-message" class="error-message" style="display: none;"></p>
+        </section>
+
+        <section class="thanks-section">
+            <h2>Special Thanks</h2>
+            <div class="thanks-list">
+                <div class="thanks-item">
+                    <h3>Jane Doe</h3>
+                    <p>Co-founder, Visionary Leader</p>
+                </div>
+                <div class="thanks-item">
+                    <h3>John Smith</h3>
+                    <p>Lead Architect, Core Contributor</p>
+                </div>
+                </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Your Organization Name. All rights reserved.</p>
+    </footer>
+
+    <div id="repo-popup-overlay" class="popup-overlay" style="display: none;">
+        <div id="repo-popup" class="popup">
+            <button class="close-button" onclick="closeRepoPopup()">&times;</button>
+            <h3 id="popup-repo-name"></h3>
+            <div id="popup-repo-content">
+                <p><i class="fas fa-spinner fa-spin"></i> Loading repository details...</p>
+            </div>
+            <a id="popup-repo-link" href="#" target="_blank" class="repo-link-button">View on GitHub</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it@13.0.1/dist/markdown-it.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
