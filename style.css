@@ -396,3 +396,32 @@ section {
         padding: 20px;
     }
 }
+
+/* Private Repositories Section */
+.private-repos-section {
+    margin-top: 40px; /* Add some space above this section */
+}
+
+.private-repos-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.private-repos-section li {
+    background-color: #233748; /* Same background as public repos */
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-left: 5px solid #FFC107; /* Amber left border to distinguish private */
+}
+
+.private-repos-section li a {
+    font-size: 1.2em;
+    font-weight: bold;
+    flex-grow: 1;
+}
+
+/* The .repo-info-icon class is already defined and applies to both sections */
