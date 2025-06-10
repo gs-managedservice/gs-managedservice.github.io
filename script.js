@@ -90,15 +90,27 @@ async function fetchRepositories() {
 
 async function showRepoDetails(event) {
     const repoName = event.target.dataset.repoName;
-    const repoOwner = event.target.dataset.repoOwner;
-    const readmeUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/readme`;
-    const repoGithubUrl = `https://github.com/${repoOwner}/${repoName}`;
+    const repoOwner = event.target.dataset.repoOwner; // This will be ORGANIZATION_NAME for dynamic ones
+    const repoGithubUrl = `https://github.com/${repoOwner}/${repoName}`; // Default URL
+
+    // Get the manually defined description if it exists
+    const manualDescription = event.target.dataset.repoDescription; // <--- NEW LINE
 
     popupRepoName.textContent = repoName;
-    popupRepoLink.href = repoGithubUrl;
-    popupRepoContent.innerHTML = '<p><i class="fas fa-spinner fa-spin"></i> Loading repository details...</p>'; // Show loading inside popup
-    repoPopupOverlay.style.display = 'flex'; // Show the popup
+    popupRepoLink.href = repoGithubUrl; // This will be the direct GitHub link for public or manual
+    repoPopupOverlay.style.display = 'flex';
 
+    if (manualDescription) { // <--- NEW CONDITIONAL LOGIC
+        // If a manual description is provided (for private/manual entries)
+        popupRepoContent.innerHTML = md.render(manualDescription); // Render the manual description as Markdown
+        return; // Exit the function, no need to fetch API
+    }
+
+    // --- Original logic for public repos (remains unchanged) ---
+    // This part will only execute if manualDescription is NOT present
+    popupRepoContent.innerHTML = '<p><i class="fas fa-spinner fa-spin"></i> Loading repository details...</p>'; // Show loading inside popup
+
+    const readmeUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/readme`;
     try {
         const readmeResponse = await fetch(readmeUrl, {
             headers: {
@@ -107,13 +119,12 @@ async function showRepoDetails(event) {
         });
 
         if (!readmeResponse.ok) {
-            // If README.md doesn't exist or other error, show a message
             popupRepoContent.innerHTML = '<p>No detailed description found (README.md not available or readable).</p>';
             return;
         }
 
         const readmeMarkdown = await readmeResponse.text();
-        const htmlContent = md.render(readmeMarkdown); // Convert Markdown to HTML
+        const htmlContent = md.render(readmeMarkdown);
         popupRepoContent.innerHTML = htmlContent;
 
     } catch (error) {
