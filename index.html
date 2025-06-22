@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GS MS Automation</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="NewStyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
@@ -15,67 +15,66 @@
         <div class="org-info">
             <h1 id="org-name">GS MS</h1>
             <p id="org-description">
-                We are a cutting-edge technology organization dedicated to innovation, open-source contributions, and solving complex problems with elegant software solutions. Our focus is on creating impactful tools and fostering a collaborative community.
+                cutting-edge technology line of business dedicated to server our Clients through operation excellence, innovation, and solving complex problems with elegant software solutions. Our focus is on creating impactful tools and fostering a collaborative community.
             </p>
         </div>
     </header>
 
-    <main class="container">
-       <!-- <section class="repos-section">
-            <h2>Our Open Source Projects</h2>
-            <p>Explore our active repositories and dive into our code.</p>
-            <ul id="repos-list">
-                <li><i class="fas fa-spinner fa-spin"></i> Loading repositories...</li>
+    <div class="main-wrapper">
+        <nav class="side-nav">
+            <h3 align="left">Our Projects</h3>
+            <ul>
+                <li><a href="#" data-project="FileMover" class="nav-link">File Mover</a></li>
+                <li><a href="#" data-project="FileHousekeepingSystem" class="nav-link">File Housekeeping System</a></li>
+                <li><a href="#" data-project="ODSTrafficFileMonitor" class="nav-link">ODS Traffic File Monitor</a></li>
+                <li><a href="#" data-project="EnterpriseDiskSpaceMonitor" class="nav-link">Enterprise Disk Space Monitor</a></li>
+                  <li><a href="#" data-project="TelecomDataLifecycleManager" class="nav-link">Telecom Data Lifecycle Manager</a></li>
+                  <li><a href="#" data-project="OracleCleanUp" class="nav-link">Oracle CleanUp</a></li>
+                  
+                  <li><a href="#" data-project="TrafficDataArchivalAutomation" class="nav-link">Traffic Data Archival Automation</a></li>
+                  <li><a href="#" data-project="ZiraGitOperations" class="nav-link">Zira Git Operations</a></li>
+                  <li><a href="#" data-project="DeleteLogs" class="nav-link">Delete Logs</a></li>
+                  <li><a href="#" data-project="SyncFiles" class="nav-link">Sync Files</a></li>
+<li><a href="#" data-project="logMaintainer" class="nav-link">log Maintainer</a></li>
+<li><a href="#" data-project="CronBackup" class="nav-link">Cron Backup</a></li>
+<li><a href="#" data-project="TimeBasedCleanup" class="nav-link">Time Based Cleanup</a></li>
+
+
+<li><a href="#" data-project="SendSMS" class="nav-link">Send SMS</a></li>
+                <li><a href="#" data-project="apiService" class="nav-link">Internal API Service</a></li>
             </ul>
-            <p id="repos-error-message" class="error-message" style="display: none;"></p>
-        </section> -->
-
-        <section class="private-repos-section">
-            <h2>Our Private/Internal Projects (Selected)</h2>
-            <p>Here are some of our key private projects, showcased for their impact and use cases.</p>
-            <ul id="private-repos-list">
-                <li>
-                    <a href="https://github.com/YourOrgName/private-project-x" target="_blank">
-                        Private Project X </a>
-                    <i class="fas fa-info-circle repo-info-icon"
-                       data-repo-name="Private Project X"
-                       data-repo-description="This project is an internal tool for managing our client data securely. It features a custom encryption module and integrates with our internal CRM. Its primary use case is streamlining data synchronization.">
-                    </i>
-                </li>
-                <li>
-                    <a href="https://github.com/YourOrgName/internal-api-service" target="_blank">
-                        Internal API Service </a>
-                    <i class="fas fa-info-circle repo-info-icon"
-                       data-repo-name="Internal API Service"
-                       data-repo-description="Our core backend service handles all internal data processing and business logic. It's built with scalability in mind and serves as the backbone for multiple applications.">
-                    </i>
-                </li>
-                </ul>
-        </section>
-
-        <section class="contributors-section">
-            <h2>Top Contributors</h2>
-            <p>A huge shoutout to our most active community members!</p>
-            <div id="contributors-grid">
-                <p><i class="fas fa-spinner fa-spin"></i> Loading contributors...</p>
-            </div>
-            <p id="contributors-error-message" class="error-message" style="display: none;"></p>
-        </section>
-
-        <section class="thanks-section">
-            <h2>Special Thanks</h2>
-            <div class="thanks-list">
-                <div class="thanks-item">
-                    <h3>Jane Doe</h3>
-                    <p>Co-founder, Visionary Leader</p>
+        </nav>
+        <main class="main-content-area">
+            <div class="container">
+                <section id="project-display" class="project-display-section">
+                    <!-- Content populated by JS -->
+                </section>
+        
+                <section class="contributors-section">
+                    <h2>Top Contributors</h2>
+                    <p>A huge shoutout to our most active community members!</p>
+                    <div id="contributors-grid">
+                        <p><i class="fas fa-spinner fa-spin"></i> Loading contributors...</p>
+                    </div>
+                    <p id="contributors-error-message" class="error-message" style="display: none;"></p>
+                </section>
+        
+                <section class="thanks-section">
+                    <h2>Special Thanks</h2>
+                    <div class="thanks-list">
+                        <div class="thanks-item">
+                            <h3>Jane Doe</h3>
+                            <p>Co-founder, Visionary Leader</p>
+                        </div>
+                        <div class="thanks-item">
+                            <h3>John Smith</h3>
+                            <p>Lead Architect, Core Contributor</p>
+                        </div>
+                        </div>
+                </section>
                 </div>
-                <div class="thanks-item">
-                    <h3>John Smith</h3>
-                    <p>Lead Architect, Core Contributor</p>
-                </div>
-                </div>
-        </section>
-    </main>
+        </main>
+    </div>
 
     <footer class="footer">
         <p>&copy; 2025 Your GS MS. All rights reserved.</p>

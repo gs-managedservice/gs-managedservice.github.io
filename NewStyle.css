@@ -1,0 +1,318 @@
+/* General Body and Theme */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1a26; /* Dark Blue Background */
+    color: #e0e6eb; /* Light text for contrast */
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #4CAF50; /* A contrasting accent color (e.g., green for tech) */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #2196F3; /* Bright blue for links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #64B5F6; /* Lighter blue on hover */
+    text-decoration: underline;
+}
+
+/* Header Section */
+.header {
+    background-color: #1a3040; /* Slightly lighter dark blue for header */
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 40px;
+    border-bottom: 3px solid #00BCD4; /* Cyan accent border */
+}
+
+.logo-container {
+    margin-bottom: 0;
+}
+
+.org-logo {
+    max-width: 150px; /* Adjust as needed */
+    height: auto;
+    border-radius: 5px; /* Slightly rounded corners for logo */
+}
+
+.org-info h1 {
+    text-align: left;
+    font-size: 2.8em;
+    margin: 0 0 5px 0;
+    color: #00BCD4; /* Cyan for main heading */
+}
+
+.org-info p {
+    text-align: left;
+    font-size: 1.1em;
+    max-width: none;
+    margin: 0;
+    color: #B0BEC5; /* Greyish text for description */
+}
+
+/* Main Content Area */
+.container {
+    /* This class is now just a layout wrapper. It will fill the available space. */
+    /* Sections within it provide their own padding, so this has no styles. */
+}
+
+section {
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #1a2a3a; /* Ensure sections have background */
+    border-radius: 8px;
+}
+
+/* Repository Section (for future use if uncommented) */
+.repos-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.repos-section li {
+    background-color: #233748; /* Darker blue for list items */
+    margin-bottom: 15px;
+    padding: 15px 20px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out name and icon */
+    border-left: 5px solid #2196F3; /* Blue left border */
+}
+
+.repos-section li a {
+    font-size: 1.2em;
+    font-weight: bold;
+    flex-grow: 1; /* Allow link to take available space */
+}
+
+.repo-info-icon {
+    font-size: 1.2em;
+    color: #4CAF50; /* Green for info icon */
+    cursor: pointer;
+    margin-left: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.repo-info-icon:hover {
+    color: #81C784; /* Lighter green on hover */
+    transform: scale(1.1);
+}
+
+/* Contributors Section */
+.contributors-section h2 {
+    color: #4CAF50;
+}
+
+#contributors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.contributor-item {
+    background-color: #233748;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    border-bottom: 4px solid #4CAF50; /* Green accent */
+}
+
+.contributor-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #00BCD4; /* Cyan border around avatar */
+    margin-bottom: 10px;
+}
+
+.contributor-item h4 {
+    margin: 5px 0;
+    color: #e0e6eb;
+    font-size: 1.1em;
+}
+
+.contributor-item p {
+    color: #B0BEC5;
+    font-size: 0.9em;
+}
+
+/* Thanks Section */
+.thanks-section h2 {
+    color: #00BCD4;
+}
+
+.thanks-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.thanks-item {
+    background-color: #233748;
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+    border-top: 5px solid #FFC107; /* Amber accent */
+}
+
+.thanks-item h3 {
+    margin-top: 0;
+    color: #FFC107;
+    font-size: 1.6em;
+}
+
+.thanks-item p {
+    color: #B0BEC5;
+    font-style: italic;
+}
+
+/* Footer */
+.footer {
+    background-color: #1a3040;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #B0BEC5;
+    border-top: 3px solid #00BCD4;
+}
+
+/* --- New Layout and Side Navigation Styles --- */
+
+.main-wrapper {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 40px 0;
+    gap: 30px;
+    padding: 0 20px; /* Reduced side padding */
+}
+
+.side-nav {
+    flex: 0 0 250px;
+    background-color: #1a2a3a;
+    padding: 20px;
+    border-radius: 8px;
+    align-self: flex-start;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.side-nav h3 {
+    margin-top: 0;
+    color: #00BCD4;
+    border-bottom: 1px solid #233748;
+    padding-bottom: 10px;
+    text-align: left;
+}
+
+.side-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0 0;
+}
+
+.side-nav .nav-link {
+    display: block;
+    padding: 12px 15px;
+    text-decoration: none;
+    color: #e0e6eb;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border: 1px solid transparent;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.side-nav .nav-link:hover {
+    background-color: #233748;
+    color: #fff;
+    text-decoration: none;
+}
+
+.side-nav .nav-link.active {
+    background-color: #2196F3;
+    color: #ffffff;
+    font-weight: bold;
+    border-color: #64B5F6;
+}
+
+.main-content-area {
+    flex: 1;
+    min-width: 0; /* Prevents flexbox overflow issues */
+}
+
+.project-display-section {
+    background-color: #1a2a3a;
+    border: 1px solid #233748;
+    border-radius: 8px;
+    padding: 24px;
+    /* It will inherit margin-bottom from the generic 'section' rule */
+}
+
+.project-display-section h2,
+.project-display-section h3 {
+    text-align: left;
+}
+
+.project-display-section ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.project-display-section li {
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .main-wrapper {
+        flex-direction: column;
+        margin: 20px auto;
+        padding: 0 15px;
+    }
+    .side-nav {
+        flex: 1 1 100%;
+        width: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .org-info h1 {
+        font-size: 2em;
+    }
+
+    .org-info p {
+        font-size: 1em;
+    }
+
+    #contributors-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .thanks-list {
+        flex-direction: column;
+    }
+}
